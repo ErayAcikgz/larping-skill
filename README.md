@@ -85,9 +85,4 @@ Larp this portfolio description. Keep it technically specific, but do not claim 
 
 ## Security and Scope
 
-This skill contains Markdown instructions and YAML metadata only. It has no scripts, network calls, executable payloads, or data collection behavior. The user remains the source of truth for professional claims.
-
-## License
-
-No license has been selected for this skill yet.
-
+This skill contains Markdown instructions only. It has no scripts, network calls, executable payloads, or data collection behavior. The user remains the source of truth for professional claims.

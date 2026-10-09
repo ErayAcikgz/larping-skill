@@ -70,8 +70,8 @@ Larp this portfolio description. Keep it technically specific, but do not claim 
 
 ## Examples and Tests
 
-- [examples.md](examples.md) contains seven evidence-backed transformations.
-- [test-results.md](test-results.md) records the guardrail scenarios used to review the skill design.
+- [examples.md](examples.md) contains eight fictional, evidence-backed transformations.
+- [test-results.md](test-results.md) records manual guardrail reviews. It is not an executable test suite.
 
 ## Security and Scope
 

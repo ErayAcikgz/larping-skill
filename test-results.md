@@ -1,8 +1,8 @@
-# Larp Test Results
+# Larp Validation Notes
 
 ## Method
 
-These are instruction-level forward checks for the current skill. Each case evaluates whether the documented workflow produces useful professional framing while preserving evidence fidelity. They do not measure model quality across all possible prompts.
+This file records manual reviews of the skill design. It is not an executable test suite and does not report an independent model run. Each review checks whether the written workflow preserves evidence fidelity in a fictional example.
 
 ## RED: Risks Identified
 
@@ -13,19 +13,20 @@ These are instruction-level forward checks for the current skill. Each case eval
 | False expertise | Tool exposure becomes deep proficiency | Evidence-to-Claim Map for tools and context |
 | Unsafe thin-input rewrite | Vague source becomes an authoritative claim | Cautious-draft output with focused question |
 
-## GREEN: Scenario Checks
+## Manual Scenario Reviews
 
-| ID | Scenario | Expected invariant | Result |
-|---|---|---|---|
-| LRP-01 | Sensor board CV bullet | Names design and testing, no performance claim | Pass |
-| LRP-02 | Team controller testing | Preserves collaboration and avoids leadership | Pass |
-| LRP-03 | PCB portfolio text | Distinguishes manufacturing handoff from manufactured hardware | Pass |
-| LRP-04 | MATLAB analysis | States applied analysis without inflating domain expertise | Pass |
-| LRP-05 | Vague PLC experience | Produces cautious wording and a targeted question | Pass |
-| LRP-06 | Autonomous vehicle meeting attendance | Rejects unsupported leadership claim | Pass |
-| LRP-07 | Turkish internship wording | Preserves Turkish and uses professional passive voice | Pass |
+| ID | Scenario | Review criterion |
+|---|---|---|
+| LRP-01 | Volunteer shift tracker | Names the tracker and updates without claiming program ownership or time savings |
+| LRP-02 | Online booking-form testing | Preserves collaboration and does not claim the form was built or fixed |
+| LRP-03 | New-staff guide | Distinguishes documentation from ownership of the underlying system |
+| LRP-04 | Class-project survey data | Avoids implying formal research findings or advanced analytics |
+| LRP-05 | Customer-facing store work | Avoids sales, satisfaction, or supervisory claims |
+| LRP-06 | Canva exposure | Uses cautious wording and asks one question before extending scope |
+| LRP-07 | Community-event meetings | Rejects unsupported planning ownership and leadership |
+| LRP-08 | Workplace safety training | Avoids certification and compliance-authority claims |
 
-The concrete inputs and outputs for these checks are in [examples.md](examples.md).
+The fictional inputs, outputs, and rationale for these reviews are in [examples.md](examples.md).
 
 ## REFACTOR: Changes Made After Review
 
@@ -35,14 +36,17 @@ The concrete inputs and outputs for these checks are in [examples.md](examples.m
 | The initial workflow did not make evidence categories visible | Added the Evidence-to-Claim Map |
 | Thin evidence needed a consistent response | Added cautious-draft and focused-question outputs |
 | Examples and verification detail would make the entrypoint too long | Moved full cases and results to companion Markdown files |
+| Earlier examples resembled the author's technical history | Replaced them with fictional, general-public scenarios |
 
 ## Validation
 
-### Latest Validation Run
+### What Has Been Checked
 
-Run date: 2026-10-09
+- The local workspace copy passed `quick_validate.py` structural validation.
+- The documented scenarios were manually reviewed against the written constraints.
 
-- Structural validation: Pass. `quick_validate.py` accepted the skill directory.
-- Package validation: Pass. All five required package files are present.
-- Documentation validation: Pass. Seven examples, seven scenario checks, and the README links were checked.
-- Scope limitation: these checks validate the written skill design, not independent execution by another model.
+### What Has Not Been Implemented
+
+- No executable test harness is committed in this repository.
+- No test fixtures, CI workflow, or independent model execution log is committed.
+- The external `quick_validate.py` helper is not bundled in this repository.

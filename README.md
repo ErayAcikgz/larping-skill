@@ -50,6 +50,20 @@ larping-skill/
 
 Commit the complete package. `SKILL.md` is required. The other Markdown files document use cases and validation. No `agents` directory is required for discovery or installation.
 
+Install it with the official Skills CLI:
+
+```text
+npx skills add ErayAcikgz/larping-skill --skill larp --agent codex --yes --copy
+```
+
+Or let the CLI detect a supported agent interactively:
+
+```text
+npx skills add ErayAcikgz/larping-skill
+```
+
+This is a Git-hosted agent skill, not an npm executable. `npx skills` is the intended integration point.
+
 ## Usage
 
 Invoke the skill explicitly:

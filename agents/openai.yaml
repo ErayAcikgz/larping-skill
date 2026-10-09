@@ -1,0 +1,4 @@
+interface:
+  display_name: "Larp"
+  short_description: "Strengthen real professional work without exaggeration"
+  default_prompt: "Use $larp to strengthen this CV bullet without adding unsupported claims."

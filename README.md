@@ -38,21 +38,17 @@ Evidence → Scope check → Artifact route → Rewrite → Verification → Del
 
 ## Installation
 
-For a repository-scoped Codex skill, keep this directory intact:
+For a standalone skill repository, keep these files at the repository root:
 
 ```text
-.agents/
-└── skills/
-    └── larp/
-        ├── SKILL.md
-        ├── README.md
-        ├── examples.md
-        ├── test-results.md
-        └── agents/
-            └── openai.yaml
+larping-skill/
+├── SKILL.md
+├── README.md
+├── examples.md
+└── test-results.md
 ```
 
-Commit the entire `larp` directory. `SKILL.md` is required. The other Markdown files document use cases and validation, while `agents/openai.yaml` retains the user-facing metadata.
+Commit the complete package. `SKILL.md` is required. The other Markdown files document use cases and validation. No `agents` directory is required for discovery or installation.
 
 ## Usage
 
@@ -80,3 +76,4 @@ This skill contains Markdown instructions and YAML metadata only. It has no scri
 ## License
 
 No license has been selected for this skill yet.
+
